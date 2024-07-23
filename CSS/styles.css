@@ -175,7 +175,7 @@ a {
 }
 
 .icon--primary {
-  fill: var(--color-primary)
+  fill: var(--color-primary);
 }
 
 .icon--white {
@@ -549,4 +549,66 @@ a {
     justify-self: start;
     margin: 0 2rem;
   }
+}
+
+/* Collapsibles */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.collapsible__heading {
+  margin: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(-90deg);
+  transition: transform 0.5s;
+}
+
+.collapsible__content {
+  display: none;
+}
+
+.collapsible--expanded .collapsible__chevron {
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  display:block;
+}
+
+/* Blocks */
+
+.block {
+  --padding-vertical: 6rem;
+  padding: 6rem 2rem;
+  border: 2px solid red;
+}
+
+.block__header {
+  text-align: center;
+}
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: black;
+  color:#7b858b;
+}
+
+.block--dark .block__heading {
+  color: white;
+}
+
+.block--slant {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 86%);
+  padding-bottom: var(--padding-vertical);
+}
+
+.card--block {
+  max-width: 1140px;
+  margin: 0 auto;
 }
